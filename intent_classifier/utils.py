@@ -23,7 +23,7 @@ def word_to_index(vocab):
     word_to_idx = {}
 
     for word in vocab:
-        word_to_idx[word] += 1
+        word_to_idx[word] = len(word_to_idx)
 
     return word_to_idx
 
