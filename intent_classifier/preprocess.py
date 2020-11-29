@@ -51,7 +51,7 @@ def make_dataset():
         for j in i["question"]:
             words = _tokenize_input(j)
             vocab.extend(words)
-            training_data.append((words, vocab))
+            training_data.append((words, tag))
 
     vocab = set(vocab)
     word_to_idx = word_to_index(vocab)
