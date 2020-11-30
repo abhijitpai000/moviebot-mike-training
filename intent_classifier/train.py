@@ -60,6 +60,4 @@ def train_model():
     }
 
     torch.save(learned_parameters, "learned_parameters.pth")
-
-if __name__ == '__main__':
-    train_model()
+    return
