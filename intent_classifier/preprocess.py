@@ -36,7 +36,7 @@ def make_dataset():
 
     Returns
     -------
-        vocab, word_to_idx, train_X, train_y
+        vocab, word_to_idx, intents, train_X, train_y
     """
     with open("data.json", "r") as f:
         data = json.load(f)
@@ -69,7 +69,7 @@ def make_dataset():
     train_X = torch.FloatTensor(train_X)
     train_y = torch.LongTensor(train_y)
 
-    return vocab, word_to_idx, train_X, train_y
+    return vocab, word_to_idx, intents, train_X, train_y
 
 
 class NeuralNetData(Dataset):
