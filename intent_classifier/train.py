@@ -21,7 +21,7 @@ def train_model():
         learned_parameters.pth
     """
 
-    vocab, word_to_idx, train_X, train_y = make_dataset()
+    vocab, word_to_idx, intents, train_X, train_y = make_dataset()
     dataset = NeuralNetData(train_X, train_y)
 
     input_size = len(vocab)
@@ -56,8 +56,13 @@ def train_model():
         "hidden_size": hidden_size,
         "output_size": output_size,
         "vocab": vocab,
-        "word_to_idx": word_to_idx
+        "word_to_idx": word_to_idx,
+        "intents": intents
     }
 
     torch.save(learned_parameters, "learned_parameters.pth")
     return
+
+
+if __name__ == '__main__':
+    train_model()
