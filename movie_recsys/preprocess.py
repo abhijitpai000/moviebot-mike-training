@@ -38,7 +38,10 @@ def make_dataset():
     movie_data = movie_data[movie_data["imdb_rating"] >= 7.0]
 
     # Merge Plot.
-    movie_data = movie_data.merge(plot[["story", "imdb_id"]], how="left", on="imdb_id")
+    movie_data = movie_data.merge(plot[["story", "imdb_id", "summary"]], how="left", on="imdb_id")
+
+    # Drop meta data.
+    movie_data.drop(["runtime", "imdb_rating"], axis=1, inplace=True)
 
     # Remove Duplicates and NaN.
     movie_data.dropna(axis=0, inplace=True)
