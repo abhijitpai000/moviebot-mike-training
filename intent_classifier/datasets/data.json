@@ -1,0 +1,64 @@
+{
+  "intents": [
+    {
+      "intent": "wakeword",
+      "question": ["hi", "hello",  "hey", "anybody there?",
+                   "mike", "yo mike", "hello mike", "hi mike", "what's up? mike", "mike you there?",
+                   "unk"],
+      "response": ["hello!", "hey!", "what's up?"]
+    },
+    {
+      "intent": "greeting",
+      "question": ["hi, how are you doing?", "hello, how are you doing?",
+                  "how are you doing?","how is everything?", "all good?", "what's up?",
+                  "unk"],
+      "response": ["all good, how can i help you?", "everything alright, how are you doing?", "what's up?"]
+    },
+    {
+      "intent": "about",
+      "question": ["what are you?", "who are you?", "what do you do?", "tell me about yourself",
+                   "what are your features?", "what can you do?", "what tasks can you perform?",
+                   "unk"],
+      "response": ["i'm mike, i recommend movies based on plot similarity, say 'movies like movie-title'"]
+    },
+    {
+      "intent": "banter",
+      "question": ["do you have friends?", "where are you from?", "what do you do all day?",
+                   "can we date?", "will you be my friend?", "can we be friends"],
+      "response": ["i'm a bot, i'm learning new thing everyday"]
+    },
+    {
+      "intent": "movie_interest",
+      "question": ["what do you like do in your free time?", "what movies do you like?",
+                   "do you watch movies?", "what movies do you watch?", "what are your personal favorites?",
+                   "give me your personal favorites", "what shows do you watch?", "what tv shows do you like?",
+                   "unk"],
+      "response": ["i like watching comedy flicks, try 'recommend movies like movie-title'"]
+    },
+    {
+      "intent": "watch_next",
+      "question": ["movies like unk", "movies like unk unk", "movies like unk unk unk",
+                   "movies like unk unk unk unk", "movies like unk unk unk unk unk",
+                   "movies like unk unk unk unk unk"],
+      "response": ["Similar Movie"]
+    },
+    {
+      "intent": "movie_plot",
+      "question": ["about unk", "about unk unk", "about unk unk unk", "about unk unk unk unk unk",
+                   "about unk unk unk unk unk unk", "about unk unk unk unk unk unk unk"],
+      "response": ["Movie Plot"]
+    },
+    {
+      "intent": "profanity",
+      "question": ["you're a dick", "you're a pussy", "you're a loser", "dickhead", "fuck you", "screw you",
+                   "you're an asshole", "twat", "motherfucker"],
+      "response": ["that's not a nice thing to say"]
+    },
+    {
+      "intent": "feedback",
+      "question": ["you suck", "you're not good", "you're a loser", "i like you", "i love talking to you",
+                   "you don't know shit", "you're mean", "you're rude"],
+      "response": ["thank you for your feedback, i'll notify my developer"]
+    }
+  ]
+}
