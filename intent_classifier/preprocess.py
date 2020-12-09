@@ -11,7 +11,7 @@ from torch.utils.data import Dataset
 
 
 # Local Imports.
-from utils import word_to_index, make_bow_vector
+from intent_classifier.utils import word_to_index, make_bow_vector
 
 
 def _tokenize_input(input_seq):
@@ -38,7 +38,7 @@ def make_dataset():
     -------
         vocab, word_to_idx, intents, train_X, train_y
     """
-    with open("data.json", "r") as f:
+    with open("intent_classifier/datasets/data.json", "r") as f:
         data = json.load(f)
 
     vocab = []
