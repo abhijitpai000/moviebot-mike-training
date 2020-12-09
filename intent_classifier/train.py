@@ -1,7 +1,6 @@
 """
 Training the network.
 """
-from utils import make_bow_vector
 from preprocess import make_dataset, NeuralNetData
 from model import NeuralNet
 
