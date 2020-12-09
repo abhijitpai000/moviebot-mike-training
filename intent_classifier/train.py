@@ -1,8 +1,8 @@
 """
 Training the network.
 """
-from preprocess import make_dataset, NeuralNetData
-from model import NeuralNet
+from intent_classifier.preprocess import make_dataset, NeuralNetData
+from intent_classifier.model import NeuralNet
 
 # torch imports.
 import torch
@@ -59,7 +59,7 @@ def train_model():
         "intents": intents
     }
 
-    torch.save(learned_parameters, "learned_parameters.pth")
+    torch.save(learned_parameters, "intent_classifier/datasets/learned_parameters.pth")
     return
 
 
